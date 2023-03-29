@@ -1,0 +1,78 @@
+InvoiceCreated: "Invoice created successfully!"
+InvoiceExistsToaster: "Invoice already exists in the system"
+InvoiceExistsAlert: "Sorry, Invoice already exists in the system"
+ProductApproved: "Transaction reviewed successfully!"
+VendorApproved: "Transaction(s) reviewed successfully!"
+ReInitiateSucess: "Transaction re-initiated successfully!"
+InvalidAnchorGSTN: "Unable to find Anchor from the GSTN provided"
+InvalidAnchorGSTNAlert: "Sorry, Unable to find Anchor from the GSTN provided"
+InvalidVendorGSTN: "Unable to find Vendor from the GSTN provided"
+InvalidVendorGSTNAlert: "Sorry, Unable to find Vendor from the GSTN provided"
+InvoiceRemoved: "Uploaded invoice successfully removed!"
+DisburseSuccess: "Fund(s) disbursed successfully!"
+InvalidDisburseAmount: "Disbursment amount should be equal to all transactions value"
+PaymentsSuccess: "Payments recorded successfully!"
+ExistingOverdues: "User is not allowed to create invoices since there are one/more overdue invoices present"
+ExistingOverduesAlert: "Sorry, User is not allowed to create invoices since there are one/more overdue invoices present"
+VendorInvited: "Vendor has been invited."
+VendorExists: "Vendor already exists in the same program"
+VendorRemoved: "You successfully removed selected vendors from your profile."
+CompanyDetailsSaved: "Company details saved successfully."
+PromoterAdded: "Promoter information added"
+PromoterUpdated: "Promoter information updated"
+PromoterDeleted: "Promoter information deleted"
+KMPersonAdded: "Key Managing Persons saved successfully."
+KMPersonUpdated: "Key Managing Persons saved successfully."
+KMPersonDeleted: "Key Managing Persons saved successfully."
+SubmitForApproval: "Submitted for review."
+ProfileSummaryModal: "Profile submitted for review!\nYou will be notified once Yubi starts processing your details and documents. On successful review, you will be onboarded on the platform."
+DocumentsReviewed: "Document reviewed successfully."
+ReviewSubmitted: "Review Submitted."
+VendorProgramAdded: 'Limits saved successfully.'
+UniqueIdentifierError: 'identifier should be unique for investor anchor vendor combination'
+ApproveCommercials: "Accepted commercials successfully."
+BDSigned: "Borrowing Document uploaded successfully!"
+ProcessingFee: 'Payment recorded successfully!'
+ProcessingFeeVerified: 'approve successfully!'
+PODealerAssignSuccess: 'Successfully assigned under PO Financing - Dealer Program'
+AddCommercials: 'Commercials saved successfully.'
+UpdateCommercials: 'Commercials updated successfully.'
+MOUSuccess: 'MOU uploaded successfully!'
+InvoiceMandatory: 'Invoice file attachment is mandatory'
+InvoiceMandatoryAlert: 'Sorry, Invoice file attachment is mandatory'
+POCreated: 'Purchase Order created successfully!'
+POReviewSubmitted: 'Submitted for review!'
+ReviewApproved: 'approved successfully!'
+ReviewRejected: 'rejected successfully!'
+PFPending: 'Processing fee is not yet approved'
+PFReject: 'reject successfully!'
+MaxSanctionLimitReched: 'Disbursements has reached the sanction limit for the investor vendor anchor commercial'
+WrongIFSCCode: "Validation failed: Ifsc code is the wrong length (should be 11 characters), Ifsc code is invalid"
+InvalidIFSC: "Invalid IFSC Code"
+InvalidAccNumber: "Validation failed: Account number is not a number"
+BankDetailsUpdated: "Bank details saved."
+DDVendorAssignSucess: 'Successfully assigned under Dynamic Discounting - Vendor Program'
+DraftSaved: 'Program saved as draft'
+DraftUpdated: 'Updated successfully'
+ProgramDeleted: 'Successfully deleted program!'
+InterestVerified: 'Interest verified successfully!'
+MaxExposureFailure: 'Max exposure should be less than program size'
+MaxTrancheValidation: 'Validation failed: Max tenor cannot be greater than door to door tenor'
+RequestedValueAlert: 'Requested Disbursement Value cannot be greater than the entered PO value'
+Rules:
+  Created: 'Rules created!'
+  Updated: 'Rules updated!'
+  Deleted: 'Rules deleted!'
+Status:
+  Rejected: 'Declined'
+Investor:
+  Commercial_Approval: 'You successfully approved the commercials of this invoice financing program!'
+YubiFlowAlert: 'Yubi Flow Alert'
+Mail_Welcome_Subject: 'Welcome to Yubi'
+Promoter_Info: 'Promoter information is Incorrect'
+Company_Info: 'Company information is Incorrect'
+Key_Managing_Info: 'Key Managing Details are Incorrect'
+Correct Password: 'Password is correct!'
+Incorrect Password: 'Wrong password. Try again'
+RecommondedMessage: 'You have successfully recommended'
+SOA_Maximum_Duration: 'Maximum duration is 180 days'

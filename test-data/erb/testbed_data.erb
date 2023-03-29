@@ -1,0 +1,119 @@
+{
+  "Investor Commercials": {
+      "investor" : "Kotak",
+      "Recourse" : "100%",
+      "Pricing" : "12 - 18%",
+      "Margin" : "10%",
+      "Tenor" : "150 Days",
+      "Penal Charges" : "12%"
+  },
+  "Invoice Details" : {
+    "Invoice Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "Invoice Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "Invoice Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    "GSTN of Anchor" : "<%= @anchor_gstn %>",
+    "GSTN of Channel Partner" : "<%= @counterparty_gstn %>",
+    "EWB No" : "EWB<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "EWB Date" : "<%= Date.today.strftime("%d-%b-%Y") %>"
+  },
+  "PO Details" : {
+    "PO Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "PO Value" : <%= Faker::Number.number(digits: 5) * 10 %>,
+    "Requested Disbursement Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "PO Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    "GSTN of Anchor" : "<%= @party_gstn %>",
+    "GSTN of Channel Partner" : "<%= @counterparty_gstn %>"
+  },
+  "Transaction List" : {
+    "Status" : "Draft",
+    "Vendor Name" : "<%= @vendor_name %>",
+    "Anchor Name" : "<%= @anchor_name %>",
+    "Investor Name" : "<%= @investor_name %>",
+    "Instrument Value" : "₹20,000",
+    "Date of Initiation" : "<%= Date.today.strftime("%d %b, %Y") %>"
+  },
+  "Transaction Details" : {
+    "Instrument Value" : "₹20,000",
+    "Name of the Vendor/Dealer" : "<%= @vendor_name %>",
+    "Name of the Anchor" : "<%= @anchor_name %>",
+    "Instrument Date" : "<%= Date.today.strftime("%d %b, %Y") %>"
+  },
+  "PO Detail View" : {
+    "Instrument Value" : "₹20,000",
+    "Requested Disbursement Value" : "₹20,000",
+    "Name of the Vendor/Dealer" : "<%= @vendor_name %>",
+    "Name of the Anchor" : "<%= @anchor_name %>",
+    "Instrument Date" : "<%= Date.today.strftime("%d %b, %Y") %>",
+    "GSTN of Anchor" : "<%= @party_gstn %>",
+    "GSTN of Vendor/Dealer" : "<%= @counterparty_gstn %>"
+  },
+  "Dealer Invoice Details" : {
+    "Invoice Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "Invoice Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "Invoice Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    "GSTN of Channel Partner" : "<%= @dealer_gstn %>",
+    "GSTN of Anchor" : "<%= @counterparty_gstn %>",
+    "EWB No" : "EWB<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "EWB Date" : "<%= Date.today.strftime("%d-%b-%Y") %>"
+  },
+  "Vendor Invoice Details" : {
+    "Invoice Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "Invoice Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "Invoice Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    "GSTN of Channel Partner" : "<%= @vendor_gstn %>",
+    "GSTN of Anchor" : "<%= @counterparty_gstn %>",
+    "EWB No" : "EWB<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "EWB Date" : "<%= Date.today.strftime("%d-%b-%Y") %>"
+  },
+  "Reject Reason": "<%= Faker::Quote.yoda%>",
+  "Discrepancy Reason": "<%= Faker::Quote.most_interesting_man_in_the_world %>",
+  "Re-Initiate Details" : {
+    "Invoice Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "Invoice Date" : "<%= (Date.today-1).strftime("%d-%b-%Y") %>"
+  },
+  "Re-Initiate PO Details" : {
+    "PO Value" : <%= Faker::Number.number(digits: 5) * 10 %>,
+    "Requested Disbursement Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "PO Date" : "<%= (Date.today-1).strftime("%d-%b-%Y") %>"
+  },
+  "GRN Invoice Details" : {
+    "Invoice Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "Invoice Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "Invoice Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    "GSTN of Anchor" : "<%= @anchor_gstn %>",
+    "GSTN of Channel Partner" : "<%= @counterparty_gstn %>",
+    "GRN" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "GRN Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    "EWB No" : "EWB<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "EWB Date" : "<%= Date.today.strftime("%d-%b-%Y") %>"
+  },
+  "DD Invoice Details" : {
+    "Invoice Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+    "Invoice Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "Invoice Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    "GSTN of Anchor" : "<%= @anchor_gstn %>",
+    "GSTN of Vendor" : "<%= @vendor_gstn %>",
+    "GRN" : <%= Faker::Number.number(digits: 4) * 10 %>,
+    "GRN Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    <% if @due_date.nil? %>
+      "Due Date" : "<%= (Date.today+30).strftime("%d-%b-%Y") %>",
+    <% elsif @due_date.class == Date %>
+      "Due Date" : "<%= @due_date.strftime("%d-%b-%Y") %>",
+    <% end %>
+    <% if @desired_date.nil? %>
+      "Desired Date" : "<%= (Date.today+10).strftime("%d-%b-%Y") %>",
+    <% elsif @desired_date.class == Date %>
+      "Desired Date" : "<%= @desired_date.strftime("%d-%b-%Y") %>",
+    <% end %>
+    <% if @discount.nil? %>
+      "Discount" : "10",
+    <% else %>
+      "Discount" : "<%= @discount %>",
+    <% end %>
+    <% if @tds.nil? %>
+      "TDS" : "8"
+    <% else %>
+      "TDS" : "<%= @tds %>"
+    <% end %>
+  }
+}

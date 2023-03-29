@@ -1,0 +1,26 @@
+{
+  "config": {
+    "user": "grn_anchor"
+  },
+  "vendor": {
+    "create": {
+      "Entity Name" : "<%= Faker::Name.first_name %> <%= Faker::Name.last_name.delete('\'') %>",
+      "Email" : "<%= Faker::Name.first_name[0..2].downcase %><%= Faker::Name.first_name[0..2].downcase %><%= Faker::Name.last_name[-3..-1].downcase %><%= Faker::Name.last_name[-3..-1].downcase %>@yopmail.com",
+      "GSTN" : "<%=Faker::Number.number(digits: 2)%><%= Faker::Name.initials(number: 3)%><%=['C','P','H','F','A','T','B','L','J'].sample%><%=Faker::Name.initials(number: 1)%><%=Faker::Number.number(digits: 4)%><%=Faker::Name.initials(number: 1)%><%= Faker::Number.number(digits: 1) %>Z<%=Faker::Name.initials(number: 1)%>",
+      "Program" : "PO Financing - Vendor Program",
+      "actor": "grn_anchor"
+    },
+    "create_dd": {
+      "Entity Name" : "<%= Faker::Name.first_name %> <%= Faker::Name.last_name.delete('\'') %>",
+      "Email" : "<%= Faker::Name.first_name[0..2].downcase %><%= Faker::Name.first_name[0..2].downcase %><%= Faker::Name.last_name[-3..-1].downcase %><%= Faker::Name.last_name[-3..-1].downcase %>@yopmail.com",
+      "GSTN" : "<%=Faker::Number.number(digits: 2)%><%= Faker::Name.initials(number: 3)%><%=['C','P','H','F','A','T','B','L','J'].sample%><%=Faker::Name.initials(number: 1)%><%=Faker::Number.number(digits: 4)%><%=Faker::Name.initials(number: 1)%><%= Faker::Number.number(digits: 1) %>Z<%=Faker::Name.initials(number: 1)%>",
+      "Program" : "Dynamic Discounting - Vendor Program",
+      "Bank Details" : true,
+      "GST" : "8",
+      "actor": "grn_anchor",
+      "Bank Name" : "HDFC",
+      "IFSC Code" : "HDFC0000003",
+      "Account Number" : "1234567890"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+uuid: 2d8698dd-3e22-4bfa-b002-f1c6b1dad95b
+endpoint: http://3.111.18.207:8080/api/v1 # public ip, to be hit from frontier
+project: regression
+launch: SCF_REGRESSION_DAILY
+use_standard_logger: true
+formatter_modes: attach_to_launch
+
+# is_debug: true
+# endpoint: http://10.200.6.173:8080/api/v1 # private ip

@@ -1,0 +1,139 @@
+transactions:
+  invoice:
+    create: /invoices/
+    create_bulk: /invoice_files
+    get: /invoices/
+    bulk_invoice_status: /invoice_files/{id}
+    assign_investor: /invoices/assign_investor
+    approve: /products/approve_invoice
+    verify: /invoices/verify
+    re_initiate: /invoices/{id}/re_initiate
+  po:
+    create: /purchase_orders
+    get: /purchase_orders/
+    assign_investor: /purchase_orders/assign_investor
+    get_assign_investors: /purchase_orders/assign_investors
+    create_bulk: /purchase_order_files
+    bulk_invoice_status: /purchase_order_files/{id}
+    re_initiate: /purchase_orders/{id}/re_initiate
+  dd:
+    create_bulk: /invoice_files
+    bulk_invoice_status: /invoice_files/{id}
+    disburse: /anchors/disburse_invoices
+    
+disbursement:
+  disburse: /investors/disburse_amount
+  decline: /investors/reject_invoices
+  funding_history: /anchors/funding_history
+  transactions_associated: /anchors/transaction_history
+  due: /anchors/due_for_disbursement
+  up_for_disbursal: /investors/list_anchor_vendor_invoices
+  get_disburse_group_invoices: /investors/to_disburse_group_invoices
+
+payment:
+  investor_overdue: /investors/due_anchor_vendors
+  list_refunds: /investors/list_refund_entities
+  refund_entity: /investors/refund_entity
+  resettle: /payments/resettle_invoices
+  payment_history: /anchors/payment_history
+  transaction_history: /anchors/transaction_history
+  pending_dues:
+    invoice_level: /anchors/pending_dues
+    entity_level: /anchors/pending_dues_investors
+
+product:
+  get_document: /verification_documents
+  verify_doc: /verification_documents/{id}
+  modify_vendor_state: /products/modify_vendor_state
+  delete_commercials: /investor_anchor_programs/{id}
+  get_anchor_details: /investor_anchor_programs/get_anchor_limit
+  delete_vendor_commercials: /programs/{id}/vendor_limits
+  update_anchor_commerical: /investor_anchor_programs/{commercial_id}/update_deal_mou
+  delete_investor_floating_rates: /investors/{id}/investor_profiles
+
+anchor:
+  create: /anchors/add_vendor
+  create_bulk_vendor: /vendor_files
+  bulk_vendor_status: /vendor_files/{id}
+  anchor_programs: /programs
+  delete: /anchors/remove_vendor
+  list_all_vendors: /programs/list_all_vendors
+  document_metadata: /verification_documents/business_details_metadata
+  list_anchors: /anchors/list_anchors
+  available_limits: /invoices/available_limits
+  profile: /anchors/profile
+  detail: /anchors/{id}
+
+vendor:
+  vendor_details: /vendors/detail
+  add_company_info: /vendors/update_business_information
+  add_promoter: /vendors/add_promoter_information
+  add_km_person: /vendors/update_key_managing_information
+  add_bank_details: /vendors/bank_details
+  upload_docs: /verification_documents
+  submit_for_review: /vendors/submit_for_review
+  get_vendor_commercial: /programs/vendor_limits
+  list_vendor: /programs/list_vendors
+  set_limits: /investors/vendor_limits
+  update_limit: /programs/vendor_limits
+  approve_limit: /vendors/approve_limit
+  upload_bd: /programs/{id}/upload_bd
+  fee_payment: /vendors/fee_payment
+  approve_processing_fee: /payments/{id}/processing_fee
+  pending_dues:
+    entity_level: /vendors/pending_dues_investors
+  get_invitation_details: /vendors/get_invitation_details
+  update_promoter_information: /vendors/update_promoter_information
+  vendor_fee_notifications: /programs/fee_payments/notifications
+  list_onboarding_documents: /verification_documents/list_all_onboarding_documents
+  update_document_type: /verification_documents/{id}/update_document_type
+
+programs:
+  all_anchor_program: /anchor_programs
+  publish_program: /anchor_programs/publish_programs
+  anchor_program_detail: /anchor_programs/{program_id}
+  delete_live_program: /anchor_programs/{program_id}/live_programs
+  publish_program: /anchor_programs/publish_programs
+  interested_programs: /anchor_programs/interested_programs
+  map_program: /programs/map_program
+
+dynmaic_discount:
+  create_rule: /anchor_programs/{program_id}/create_rule
+  delete_rule: /anchor_programs/{program_id}/delete_rule
+  add_platform_fee: /anchor_programs/add_dynamic_discounting_attrs
+
+investor:
+  borrowers_list: /investors/list_borrowers_data
+  set_anchor_commercial: /investor_anchor_programs/set_anchor_deal
+  edit_anchor_commercial: /investor_anchor_programs/{id}/edit_anchor_deal
+  upload_mou: /investor_anchor_programs/{id}/upload_mou
+  borrowers_list_aggregation: /investors/borrowers_aggregation
+  get_investor_preferences: /investors/detail
+  update_investor_preferences: /investors/{id}/update_investor
+  verify_mou: /investor_anchor_programs/{id}/verify_mou
+  update_vendor_commercials: /programs/{id}/admin_update_vendor_limits
+  interested_investors: /programs/interested_investors
+  program_prefs: /program_preferences/set_program_preferences
+  get_program_preferences: /program_preferences
+  up_for_renewal: /investors/up_for_renewal
+
+credit:  
+  get_customers: /cra/customers
+  customer_interest_relation: /customer_interest_relations
+  update_customer_interest_relation: /customer_interest_relations/{cir_id}
+  get_deals: /deals
+  get_detailed_customer: /cra/entities/{entity_id}/customer
+
+auth:
+  activate_user: /users/{entity_id}/activate
+
+download_documents: /documents/download
+document_template: /invoice_files/template
+
+reports:
+  report_types: /reports/report_types
+
+associated:
+  anchors: /invoices/associated_anchors?
+  vendors: /invoices/associated_vendors?
+  investors: /invoices/associated_investors?

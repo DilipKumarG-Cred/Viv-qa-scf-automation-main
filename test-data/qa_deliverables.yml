@@ -1,0 +1,215 @@
+browser: chrome
+env: qa
+
+base_url: https://tf-qa.credavenue.in/
+api_url: https://tf-qa-api.credavenue.in
+yopmail_activation: activation_qa
+vivriti_yopmail: vivriti_qa
+activation_mailbox: ca.activationmail@gmail.com
+notification_mailbox: ca.supplychainfinance@gmail.com
+commercial_id: '26'
+
+programs:
+  'Invoice Financing - Vendor': 1
+  'Invoice Financing - Dealer': 2
+  'PO Financing - Dealer': 3
+  'PO Financing - Vendor': 4
+  'Dynamic Discounting - Vendor': 5
+  
+myntra_gstn: 17AAPFU0939F1ZV
+libas_gstn: 38SSSZU0940F1ZV
+trends_gstn: 38USTZU0941F1ZV
+tvs_gstn: 17CAPBH0940E1ZV
+dozco_gstn: 38BSSZU0940F1ZV
+ramkay_gstn: 38FSSZU0940F1ZV
+zudio_gstn: 83YOUAS1090R8ZF
+kotak_gstn: 83INVES1090R8ZF
+99stores_gstn: 83VENDO6090R8ZF
+dcb_gstn: 17INVES1091R1ZF
+vendor_name: Libas Impex
+dealer_name: BD Trends
+anchor_name: Myntra
+grn_anchor_name: TVS
+grn_vendor_name: Dozco
+grn_dealer_name: Ramkay TVS
+multi_lendor_vendor_name: 99 Stores
+
+yield: 15
+margin: 10
+penal_charges: 12
+prepayment_charges: 10
+investor_name: Kotak
+vendor_tenor: 60
+dealer_tenor: 90
+door_to_door_tenor: 100
+gst: 15
+
+product_reject: Vivriti Capital Private Limited
+anchor_reject: Myntra
+
+users:
+  investor:
+    name: Kotak
+    email: kotak@yopmail.com
+    password: Think@123
+    role: investor
+    bank_name: 'RSB'
+    account_number: '232701403132'
+    ifsc_code: 'RSBK0002327'
+  anchor:
+    name: Myntra
+    email: bdmyntra@yopmail.com
+    password: Think@123
+    role: anchor
+    gstn: 17AAPFU0939F1ZV
+    bank_name: 'DCB'
+    account_number: '456789889988'
+    ifsc_code: 'IDCB0112233'
+  vendor:
+    name: Libas Impex
+    email: bdlibas@yopmail.com
+    password: Think@123
+    role: vendor
+    gstn: 38SSSZU0940F1ZV
+    bank_name: 'IOB'
+    account_number: '232701403166'
+    ifsc_code: 'IOBK0009882'
+  # dealer:
+  #   name: Trends
+  #   email: bdtrends@yopmail.com
+  #   password: Think@123
+  #   role: dealer
+  dealer:
+    name: BD Trends
+    email: bdtrendss@yopmail.com
+    password: Think@123
+    role: dealer
+    gstn: 38USTZU0941F1ZV
+    bank_name: 'DCB'
+    account_number: '456789773355'
+    ifsc_code: 'IDCB0672948'
+  product:
+    name: Vivriti Capital Private Limited
+    email: aleena.susan@vivriticapital.com
+    password: Think@123
+    role: product
+  grn_anchor:
+    name: TVS
+    email: bdtvs@yopmail.com
+    password: Think@123
+    role: anchor
+    gstn: 17CAPBH0940E1ZV
+    bank_name: 'DCB'
+    account_number: '456789339900'
+    ifsc_code: 'IDCB0758372'
+  grn_vendor:
+    name: Dozco
+    email: dozco@yopmail.com
+    password: Think@123
+    role: vendor
+    gstn: 38BSSZU0940F1ZV
+    bank_name: 'DCB'
+    account_number: '456789223311'
+    ifsc_code: 'IDCB0937483'
+  grn_dealer:
+    name: Ramkay TVS
+    email: ramkay@yopmail.com
+    password: Think@123
+    role: vendor
+    gstn: 38FSSZU0940F1ZV
+    bank_name: 'DCB'
+    account_number: '456733997722'
+    ifsc_code: 'IDCB0123456'
+  user_feedback_anchor:
+    name: Hyundai Motor Company
+    email: bdhyundai@yopmail.com
+    password: Think@123
+    gstn: 17ABCDH0940E1ZV
+  user_feedback_vendor:
+    name: GK Enterprise
+    email: gk@yopmail.com
+    password: Think@123
+    gstn: 54MCAZU0940F1ZV
+  user_feedback_investor:
+    name: DCB Bank
+    email: dcb_bank@vivriticapital.com
+    password: Think@123
+  po_vendor:
+    name: Exide
+    email: bdexide@yopmail.com
+    password: Think@123
+    gstn: 18BUDAR8936R5ZF
+  po_dealer:
+    name: Maruthi Motors
+    email: bdmaruthi@yopmail.com
+    password: Think@123
+    gstn: 98DENCH9739R5ZW
+  dd_vendor:
+    name: Tyka
+    email: bdtyka@yopmail.com
+    password: Think@123
+    gstn: 65TUECH9784R5ZE
+    bank_name: 'HDFC'
+    account_number: '456789009876'
+    ifsc_code: 'HDFC0123456'
+  commercials_anchor:
+    name: Honda Motor Corp
+    email: bdhonda@yopmail.com
+    password: Think@123
+  zudio_vendor:
+    name: Zudio
+    email: bdzudio@yopmail.com
+    password: Think@123
+  ml_vendor:
+    name: 99 Stores
+    email: 99stores@gmail.com
+    password: Think@123
+    role: vendor
+    gstn: 83VENDO6090R8ZF
+  assignment_vendor:
+    name: CH28 Stores
+    email: ch28stores@gmail.com
+    password: Think@123
+    role: vendor
+    gstn: 12CHENN2801A1ZF
+  re_assignment_vendor:
+    name: CH29 Stores
+    email: ch29stores@gmail.com
+    password: Think@123
+    role: vendor
+    gstn: 12CHENN2901A1ZF
+  anchor_summary_anchor:
+    name: Snapdeal
+    email: snapdeal@yopmail.com
+    password: Think@123
+    role: anchor
+    gstn: 07ARSCU9603R1ZR
+  anchor_summary_dealer:
+    name: South Deals AS
+    email: southdealsas@gmail.com
+    password: Think@123
+    role: dealer
+    gstn: 17SOUTH1601A1ZF
+  anchor_summary_vendor:
+    name: West Store AS
+    email: weststoreas@gmail.com
+    password: Think@123
+    role: vendor
+    gstn: 17WESTS1601A1ZF
+  soa_dealer:
+    name: SOA Dealer
+    email: soadealer@yopmail.com
+    password: Think@123
+    role: dealer
+    gstn: 17SOADE1601A1ZF
+  interest_calc_anchor:
+    name: GMR
+    email: gmrinfra@yopmail.com
+    password: Think@123
+    role: anchor
+    gstn: 93GMRCH9739R5ZW
+  interest_calc_vendor:
+    name: Vatti & Co
+    email: vatti_co@yopmail.com
+    password: Think@123
+    gstn: 17VATTI1601A1ZF

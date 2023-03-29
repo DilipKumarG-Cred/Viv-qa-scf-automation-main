@@ -1,0 +1,92 @@
+{
+  "invoice" : 
+  {
+    "config": {
+      <%# cookies will be set in the label of anchor, investor only %>
+      "user": "grn_anchor",
+      <%# Program we are using is Invoice Financing - Vendor. Program IDs are constants. ENV: staging %>
+      "program_id": 1,
+      "program_type": "Invoice Financing - Vendor",
+      <%# Fields that have are non mandatory  %>
+      "non_mandatory_fields": ["GRN", "GRN Date", "EWB No", "EWB Date"],
+      <%# Fields that have special field value validations %>
+      "exempted_field_values_validations": {},
+      "choice_field": [],
+      <%# Fields to skip value validations for %>
+      "skip_fields": []
+    },
+    "create": {
+      "Invoice file" : "<%=Dir.pwd%>/test-data/attachments/anchor_invoice.pdf",
+      "Invoice Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+      "Invoice Value" : <%= (Faker::Number.number(digits: 4) * 10).to_f %>,
+      "Invoice Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+      "GSTN of Anchor" : "17CAPBH0940E1ZV",<%# TVS GSTN%>
+      "GSTN of Vendor" : "38BSSZU0940F1ZV",<%# Dozco GSTN%>
+      "GRN" : <%= (Faker::Number.number(digits: 3) * 10).to_f %>,
+      "GRN Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+      "EWB No" : "EWB<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+      "EWB Date" : "<%= Date.today.strftime("%d-%b-%Y") %>"
+    },
+    "create_ramkay": {
+      "Invoice file" : "<%=Dir.pwd%>/test-data/attachments/anchor_invoice.pdf",
+      "Invoice Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+      "Invoice Value" : <%= (Faker::Number.number(digits: 4) * 10).to_f %>,
+      "Invoice Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+      "GSTN of Anchor" : "17CAPBH0940E1ZV",<%# TVS GSTN%>
+      "GSTN of Vendor" : "38FSSZU0940F1ZV",<%# Ramkay GSTN%>
+      "GRN" : <%= (Faker::Number.number(digits: 3) * 10).to_f %>,
+      "GRN Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+      "EWB No" : "EWB<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+      "EWB Date" : "<%= Date.today.strftime("%d-%b-%Y") %>"
+    }
+  },
+  "po":
+  {
+    "config": {
+    <%# cookies will be set in the label of anchor, investor only %>
+    "user": "grn_anchor",
+    <%# Program we are using is PO Financing - Vendor . Program IDs are constants. ENV: staging%>
+    "program_id": 4,
+    "program_type": "PO Financing - Vendor"
+    },
+    "create": {
+      "PO file" : "<%=Dir.pwd%>/test-data/attachments/anchor_invoice.pdf",
+      "PO Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+      "PO Value" : <%= Faker::Number.number(digits: 5) * 10 %>,
+      "Requested Disbursement Value" : <%= Faker::Number.number(digits: 4) * 10 %>,
+      "PO Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+      "GSTN of Anchor" : "17CAPBH0940E1ZV", <%# TVS GSTN%>
+      "GSTN of Vendor" : "18BUDAR8936R5ZF" <%# Exide GSTN%>
+    }
+  },
+  "dd":
+  {
+    "config": {
+      "user": "anchor",
+      <%# Program we are using is Dynamic Discounting - Vendor. Program IDs are constants. ENV: staging %>
+      "program_id": 5,
+      "program_type": "Dynamic Discounting - Vendor",
+      <%# Fields that have are non mandatory  %>
+      "non_mandatory_fields": ["GRN", "GRN Date"],
+      <%# Fields that have special field value validations %>
+      "exempted_field_values_validations": {},
+      "choice_field": [],
+      <%# Fields to skip value validations for %>
+      "skip_fields": []
+    },
+    "create": {
+      "Invoice file" : "<%=Dir.pwd%>/test-data/attachments/anchor_invoice.pdf",
+      "Invoice Number" : "INV<%= Faker::Lorem.word.upcase %><%= Faker::Number.number %>",
+      "Invoice Value" : <%= (Faker::Number.number(digits: 4) * 10).to_f %>,
+      "Invoice Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+      "GSTN of Anchor" : "17AAPFU0939F1ZV",<%# Myntra GSTN%>
+      "GSTN of Vendor" : "65TUECH9784R5ZE",<%# Tyka GSTN%>
+      "GRN" : <%= (Faker::Number.number(digits: 4) * 10).to_f %>,
+      "GRN Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+      "TDS" : <%= (Faker::Number.number(digits: 1)) %>,
+      "Discount" : <%= (Faker::Number.number(digits: 2)) %>,
+      "Due Date" : "<%= (Date.today+30).strftime("%d-%b-%Y") %>",
+      "Desired Date" : "<%= (Date.today+20).strftime("%d-%b-%Y") %>"
+    }
+  }
+}

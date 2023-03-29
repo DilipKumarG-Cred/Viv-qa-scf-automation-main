@@ -1,0 +1,86 @@
+{
+  "config": {
+    <%# cookies will be set in the label of anchor, investor only %>
+    "actor": "grn_anchor",
+    "actor_user": "TVS",
+    "counter_party": "grn_vendor",
+    "counter_party_user": "Dozco",
+    "product": "product",
+    "investor": "investor",
+    "investor_user": "Kotak",
+    <%# Program we are using is Invoice Financing - Vendor . Program IDs are constants. ENV: staging%>
+    "program_id": 1,
+    "program_name": "Invoice Financing - Vendor",
+    "disbursement_type": "frontend",
+    "margin": 10,
+    "yield_value": 15,
+    "tenor": 60
+  },
+  "config_for_ramkay": {
+    <%# cookies will be set in the label of anchor, investor only %>
+    "actor": "grn_anchor",
+    "actor_user": "TVS",
+    "counter_party": "grn_dealer",
+    "counter_party_user": "Ramkay TVS",
+    "product": "product",
+    "investor": "investor",
+    "investor_user": "Kotak",
+    <%# Program we are using is Invoice Financing - Dealer . Program IDs are constants. ENV: staging%>
+    "program_id": 6,
+    "program_name": "Invoice Financing - Dealer",
+    "disbursement_type": "backend",
+    "margin": 10,
+    "yield_value": 15,
+    "tenor": 90
+  },
+  "disburse": {
+    "document": "<%=Dir.pwd%>/test-data/attachments/payment_proof.pdf",
+    "utr_number" : "UTR<%=DateTime.now.to_time.to_i%><%=rand(1..999)%>",
+    "payment_date" : "<%= Date.today.strftime("%Y-%m-%d") %>",
+    "amount" : <%= Faker::Number.number(digits: 5) %>,
+    "disbursement_account_number" : <%= Faker::Number.number(digits: 10) %>,
+    "invoice_transaction_ids": <%= [] %>,
+    "vendor_id": 12,<%# Dozco vendor ID%>
+    "anchor_id": 5, <%# TVS anchor ID%>
+    "program_id": 1
+  },
+  "disburse_to_ramkay": {
+    "document": "<%=Dir.pwd%>/test-data/attachments/payment_proof.pdf",
+    "utr_number" : "UTR<%=DateTime.now.to_time.to_i%><%=rand(1..999)%>",
+    "payment_date" : "<%= Date.today.strftime("%Y-%m-%d") %>",
+    "amount" : <%= Faker::Number.number(digits: 5) %>,
+    "disbursement_account_number" : <%= Faker::Number.number(digits: 10) %>,
+    "invoice_transaction_ids": <%= [] %>,
+    "vendor_id": 16, <%#Ramkay TVS%>
+    "anchor_id": 5, <%# TVS anchor ID%>
+    "program_id": 2 <%#Invoice Financing Dealer%>
+  },
+  "config_for_dd": {
+    <%# cookies will be set in the label of anchor, investor only %>
+    "actor": "anchor",
+    "actor_user": "Myntra",
+    "counter_party": "dd_vendor",
+    "counter_party_user": "Tyka",
+    "product": "product",
+    "investor": "investor",
+    "investor_user": "Kotak",
+    <%# Program we are using is Invoice Financing - Dealer . Program IDs are constants. ENV: staging%>
+    "program_id": 4,
+    "program_name": "Dynamic Discounting - Vendor",
+    "disbursement_type": "backend",
+    "margin": 10,
+    "yield_value": 15,
+    "tenor": 90
+  },
+  "disburse_dd": {
+    "document": "<%=Dir.pwd%>/test-data/attachments/payment_proof.pdf",
+    "utr_number" : "UTR<%=DateTime.now.to_time.to_i%><%=rand(1..999)%>",
+    "payment_date" : "<%= Date.today.strftime("%Y-%m-%d") %>",
+    "amount" : <%= Faker::Number.number(digits: 5) %>,
+    "disbursement_account_number" : <%= Faker::Number.number(digits: 10) %>,
+    "invoice_transaction_ids": <%= [] %>,
+    "vendor_id": 1447,<%# Tyka vendor ID%>
+    "anchor_id": 4, <%# Myntra anchor ID%>
+    "program_id": 5
+  }
+}

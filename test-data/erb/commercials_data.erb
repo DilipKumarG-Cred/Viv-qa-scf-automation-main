@@ -1,0 +1,171 @@
+{
+  "Commercials": {
+    "Program" : "<%= @program_name %>",
+    "Select a Program" : "<%= @program_name %>",
+    "Entity Name" : "<%= Faker::Name.first_name %> <%= Faker::Name.last_name.delete('\'') %>",
+    "Email" : "<%= Faker::Name.first_name[0..2].downcase %><%= Faker::Name.first_name[0..2].downcase %><%= Faker::Name.last_name[-3..-1].downcase %><%= Faker::Name.last_name[-3..-1].downcase %>@yopmail.com",
+    "PAN" : "<%=  Faker::Name.initials(number: 3) %><%= ['C','P','H','F','A','T','B','L','J'].sample %><%=  Faker::Name.initials(number: 1) %><%= Faker::Number.number(digits: 4) %>R"
+  },
+  "Company Info": {
+    "Entity Type" : "<%= ['Individual', 'Sole Proprietorship', 'Partnership', 'Private Limited', 'Llp', 'Limited Compay'].sample %>",
+    "Phone Number" : "<%= Faker::Number.number(digits: 10) %>",
+    "City" : "<%= Faker::Address.city %>",
+    "Geography" : "<%= ['East', 'West', 'South', 'North'].sample %>",
+    "MSME/Non-MSME": "<%= ['MSME', 'Non-MSME'].sample %>",
+    "UAM": "<%= "D#{Faker::Number.number(digits: 11)}" %>",
+    "Incorporation Date" : "<%= Date.today.strftime("%d-%b-%Y") %>",
+    "Sector" : "<%= ['Banks', 'Airlines'].sample %>",
+    "Zipcode" : "<%= Faker::Number.number(digits: 6) %>",
+    "State" : "<%= ['Assam', 'Bihar', 'Sikkim'].sample %>",
+    "Registered Address" : "<%= Faker::Address.full_address %>",
+    "Address Type" : "<%= ['Residential', 'Office'].sample %>",
+    "Registration Type" : "<%= ['Listed', 'Unlisted'].sample %>"
+  },
+  "Promoter Info": {
+    "Salutation" : "<%= ['Mr', 'Ms', 'Mrs'].sample %>", 
+    "Full Name" : "<%= Faker::Name.first_name %> <%= Faker::Name.last_name.delete('\'') %>",
+    "Gender" : "<%= ['Male', 'Female', 'Others'].sample %>",
+    "DOB"  : "20-Jan-1994",
+    "Marital Status" : "<%= ['Single', 'Married', 'Divorced', 'Widowed', 'Separated'].sample %>",
+    "Email Id" : "<%= Faker::Internet.email %>",
+    "PAN" : "<%=  Faker::Name.initials(number: 3) %><%= ['C','P','H','F','A','T','B','L','J'].sample %><%=  Faker::Name.initials(number: 1) %><%= Faker::Number.number(digits: 4) %>R",
+    "Address Type" : "<%= ['Residential', 'Office'].sample %>",
+    "State" : "<%= ['Assam', 'Bihar', 'Sikkim'].sample %>",
+    "City" : "<%= Faker::Address.city %>",
+    "Zipcode" : "<%= Faker::Number.number(digits: 6) %>",
+    "Address" : "<%= Faker::Address.full_address %>",
+    "Phone Number" : "<%= Faker::Number.number(digits: 10) %>",
+    "Shareholding" : "90"
+  },
+  "Key Managing Person Info": {
+    "Full Name" : "<%= Faker::Name.first_name %> <%= Faker::Name.last_name.delete('\'') %>",
+    "Phone Number" : "<%= Faker::Number.number(digits: 10) %>",
+    "Designation" : "<%= Faker::Company.profession %>",
+    "Email Id" : "<%=Faker::Internet.user_name(specifier: 5..5) %>@yopmail.com"
+  },
+  "Bank Details": {
+    "Account Type" : "<%= ['Current Account', 'Cash Credit', 'Over Draft'].sample %>",
+    "Bank Name" : "<%= Faker::Bank.name.delete('()').delete('\'') %>",
+    "Beneficiary Account Name" : "<%= Faker::Name.first_name.delete('\'') %>",
+    "IFSC Code" : "<%=  Faker::Name.initials(number: 4) %>0<%= Faker::Number.number(digits: 6) %>",
+    "Account Number" : "<%=  Faker::Bank.account_number %>"
+  },
+  "Documents": {
+    "Mandatory Documents" : [
+      "GST Certificate",
+      "Entity PAN",
+      "Promoter 1 - Promoter PAN",
+      "Promoter 1 - Promoter Aadhaar"
+    ],
+    "Company KYC Documents" : [
+      "Utility Bill", 
+      "GST Certificate",
+      "Entity PAN",
+      "Lease Rent Agreement",
+      "Certificate Of Incorporation",
+      "AOA",
+      "MOA",
+      "Partnership Deed",
+      "Other Documents"
+    ],
+    "Promoter KYC Documents" : [
+      "Promoter 1 - Address Proof",
+      "Promoter 1 - Promoter PAN",
+      "Promoter 1 - Promoter Photograph"
+    ],
+    "Financials" : [
+      "Audited FY 2021-2022",
+      "Audited FY 2020-2021",
+      "Provisional FY 2021-2022"
+    ],
+    "Bank Statements" : [
+      "Bank Statement (Last 6 months)"
+    ],
+    "GST Returns" : [
+      "GST Return (Last 12 Months)"
+    ],
+    "MSME Certificate" : [
+      "CA Certificate",
+      "Udyam Registration Certificate"
+    ]
+  },
+  "Investor Commercials": {
+      "investor" : "Kotak",
+      "Recourse" : "100%",
+      "Pricing" : "12 - 18%",
+      "Margin" : "10%",
+      "Tenor" : "150 Days",
+      "Penal Charges" : "12%"
+  },
+  "Reject Reason": "<%= Faker::Quote.yoda%>",
+  "DD Commercials": {
+    "Program" : "<%= @program_name %>",
+    "Select a Program" : "<%= @program_name %>",
+    "Entity Name" : "<%= Faker::Name.first_name %> <%= Faker::Name.last_name.delete('\'') %>",
+    "Email" : "<%= Faker::Name.first_name[0..2].downcase %><%= Faker::Name.first_name[0..2].downcase %><%= Faker::Name.last_name[-3..-1].downcase %><%= Faker::Name.last_name[-3..-1].downcase %>@yopmail.com",
+    "PAN" : "<%=  Faker::Name.initials(number: 3) %><%= ['C','P','H','F','A','T','B','L','J'].sample %><%= Faker::Name.initials(number: 1) %><%= Faker::Number.number(digits: 4) %>R",
+    "GST" : "<%= Faker::Number.number(digits: 2) %>",
+    "Bank Details" : "<%= ['true', 'false'].sample %>"
+  },
+  "Vendor Commercials": {
+    "Vendor ID" : "<%=@vendor_id%>",
+    "Anchor Program ID" : "16",
+    "Anchor ID" : 5, <%# TVS %>
+    "Tenor": "60",
+    "Yield": "12",
+    "Sanction Limit" : "1000000",
+    "Processing Fee" : "2",
+    "Payment Strategy" : "IPC",
+    "Invoice Days" : "45",
+    "Investor" : "user_feedback_investor",
+    "Investor GSTN" : "83INVES1090R8ZF",
+    "Vendor" : "<%=@vendor_actor%>",
+    "Investor ID" : "9", <%# DCB %>
+    "Borrowing Document" : "<%=@borrowing_document%>",
+    "Payment Document" : "<%=@payment_proof%>",
+    "Program ID" : "6",
+    "UTR Number" : "<%="UTR#{DateTime.now.to_time.to_i}#{rand(1..999)}"%>",
+    "Valid Till" : "<%= Date.today.strftime('%Y-%m-%d')%>",
+    "Effective Date" : "<%= Date.today.strftime('%d-%b-%Y')%>"
+  },
+  "Anchor Commercials": {
+    "recourse_percentage" : "100",
+    "discount_percentage" : "10",
+    "prepayment_charges" : "12",
+    "max_tenor" : "60",
+    "penal_rate" : "15",
+    "valid_till" : "2022-12-31",
+    "valid_from" : "2021-11-01",
+    "interest_strategy" : "front_end",
+    "liability" : "anchor",
+    "disburse_by" : "invoice_value",
+    "is_invoice_file_mandatory" : false,
+    "skip_counter_party_approval" : false,
+    "max_sanction_limit" : "1000000",
+    "invoice_ageing_threshold" : "45",
+    "interest_calculation_strategy" : "compound_interest",
+    "interest_calculation_rest" : "daily_rest",
+    "investor_id" : "14", <%# Investor SBI %>
+    "anchor_program_id" : "331",
+    "min_yield" : "9.0",
+    "max_yield" : "20",
+    "effective_date": "<%= Date.today.strftime('%Y-%m-%d')%>"
+  },
+  "Validate_all_docs": [
+    "1. gst_return - 1.pdf",
+    "2. bank_account_statements - 1.pdf",
+    "3. audited_financial_documents - 1.pdf",
+    "4. audited_financial_documents - 1.pdf",
+    "5. audited_financial_documents - 1.pdf",
+    "6. lease_rent_agreement - 1.pdf",
+    "7. entity_pan - 1.pdf",
+    "8. gst_certificate - 1.pdf",
+    "9. utility_bill - 1.pdf",
+    "10. Promoter - 1  promoter_pan - 1.pdf",
+    "11. Promoter - 1  promoter_photograph - 1.pdf",
+    "12. Promoter - 1  promoter_aadhar - 1.pdf",
+    "13. Promoter - 2  promoter_photograph - 1.pdf",
+    "14. Promoter - 2  promoter_pan - 1.pdf",
+    "15. Promoter - 2  promoter_aadhar - 1.pdf"
+  ]
+}

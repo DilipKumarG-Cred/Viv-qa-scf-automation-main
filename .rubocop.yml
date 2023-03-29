@@ -1,0 +1,118 @@
+#inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'spec_helper.rb'
+
+Layout/LineLength:
+  Max: 1000
+  IgnoredPatterns: ['\A#']
+
+Layout/EndOfLine:
+  Enabled: false
+
+Layout/FirstHashElementIndentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 500
+
+Metrics/BlockLength:
+  Max: 1500
+
+Metrics/ClassLength:
+  Max: 1500
+
+Metrics/ModuleLength:
+  Max: 1000
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Style/GlobalVars:
+  AllowedVariables:
+    - $conf
+    - $endpoints
+    - $notifications
+    - $download_path
+    - $driver
+    - $gmail_helper
+    - $yopmail_helper
+    - $yopmail_activation_helper
+    - $mail_helper
+    - $activation_mail_helper
+
+Style/Documentation:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Style/SlicingWithRange:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Style/SoleNestedConditional:
+  Enabled: false
+
+Style/RedundantCondition:
+  Enabled: false
+
+Style/CaseEquality:
+  Enabled: false
+
+Style/For:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: false
+
+Style/StringConcatenation:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Naming/MethodName:
+  IgnoredPatterns: ['\A[A-Z]+']
+
+Naming/FileName:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Naming/VariableName:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false
+
+Style/CaseLikeIf:
+  Enabled: false
